@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component{
+  state ={
+    earthquakes: []
+  }
+
+  getEarthQuakes = async () => {
+    try{
+      const quakes = await fetch('http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_week.geojson')
+      const quakesJson = await quakes.json()
+      return quakesJson
+    }catch(err){
+      console.log(err)
+    }
+  }
+
+  render(){
+    console.log(this.getEarthQuakes())
+    return (
+      <div className="App">
+        <h1>heyy</h1>
+      </div>
+    )
+  }
 }
 
 export default App;
