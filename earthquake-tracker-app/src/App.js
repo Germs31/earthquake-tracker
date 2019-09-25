@@ -9,8 +9,15 @@ class App extends React.Component{
   getEarthQuakes = async () => {
     try{
       const quakes = await fetch('http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_week.geojson')
+      console.log(quakes)
+
+      if(!quakes.ok){
+        throw Error(Response.statusText)
+      }
+
       const quakesJson = await quakes.json()
-      return quakesJson
+      return quakesJson.features
+      
     }catch(err){
       console.log(err)
     }
