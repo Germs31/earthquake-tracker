@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import List from './components/Quakes'
+
 
 class App extends React.Component{
   state ={
@@ -34,7 +36,8 @@ class App extends React.Component{
     console.log(this.state.earthquakes)
     return (
       <div className="App">
-        <h1>heyy</h1>
+        <h1>Earthquakes from past week:</h1>
+        <List quakes={this.state.earthquakes}/>
       </div>
     )
   }
