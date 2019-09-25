@@ -1,5 +1,6 @@
 import React from 'react'
 import GoogleMapReact from 'google-map-react'
+import {MapDiv} from './style'
 
 class Map extends React.Component {
     static defaultProps = {
@@ -12,7 +13,15 @@ class Map extends React.Component {
 
     render(){
         return(
-            <h1>I am the map</h1>
+            <MapDiv>
+                <GoogleMapReact
+                bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_API  }}
+                defaultCenter={this.props.center}
+                defaultZoom={this.props.zoom} 
+                >
+
+                </GoogleMapReact>
+            </MapDiv>
         )
     }
 }
