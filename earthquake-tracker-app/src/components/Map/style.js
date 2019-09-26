@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 export const MapDiv = styled.div`
     width:100%;
-    height:100vh; 
+    height: 70vh; 
 `
 
 export const QuakeImg = styled.img`
