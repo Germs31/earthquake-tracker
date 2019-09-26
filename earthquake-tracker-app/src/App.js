@@ -39,7 +39,7 @@ class App extends React.Component{
       <div className="App">
         <div>
           <div class="mapContain"></div>
-          <h1>EarthQuakes</h1>
+          <h1>Earthquakes</h1>
           <Map quakes={this.state.earthquakes}/>
           <h1>Earthquakes from past week:</h1>
           <List quakes={this.state.earthquakes}/>
