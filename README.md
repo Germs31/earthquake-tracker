@@ -1,6 +1,6 @@
 # Earthquake-Tracker
 
-Here is a real time earthquake tracker API provided by [earthquake tracker site](https://earthquake.usgs.gov). Reason for built this tool was to practice fetch calls and practice more React.
+Here is a real time earthquake tracker API provided by [earthquake tracker site](https://earthquake.usgs.gov).My reason for building this tool was to practice fetch calls and practice more React.
 
 ## Technology Used
 - React
